@@ -1,0 +1,28 @@
+version: 2.1
+commands:
+  rubocop:
+    steps:
+      - run: bundle exec rubocop --fail-level A
+  tests:
+    steps:
+      - run: bundle exec rake test
+
+jobs:
+  build_2.6:
+    docker:
+      - image: cimg/ruby:2.6
+    executor: ruby/default
+    steps:
+      - checkout
+      - ruby/bundle-install
+      - rubocop
+      - tests
+  build_2.7:
+    docker:
+      - image: cimg/ruby:2.7
+    executor: ruby/default
+    steps:
+      - checkout
+      - ruby/bundle-install
+      - rubocop
+      - tests
