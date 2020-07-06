@@ -1,5 +1,8 @@
 version: 2.1
 commands:
+  install_deps:
+    steps:
+      - run: bundle install
   rubocop:
     steps:
       - run: bundle exec rubocop --fail-level A
@@ -14,7 +17,7 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
-      - ruby/bundle-install
+      - install_deps
       - rubocop
       - tests
   build_2-7:
@@ -23,7 +26,7 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
-      - ruby/bundle-install
+      - install_deps
       - rubocop
       - tests
 
