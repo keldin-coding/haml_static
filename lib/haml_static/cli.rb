@@ -2,7 +2,7 @@
 
 require 'yaml'
 require 'thor'
-require 'haml_static/engine'
+require 'haml_static/generator'
 require 'haml_static/cli/configuration'
 
 module HamlStatic
@@ -18,7 +18,7 @@ module HamlStatic
     #        default: 'site',
     #        desc: 'Directory name, relative to the current directory, where the generated HTML will go'
     # def generate
-    #   HamlStatic::Engine.new(
+    #   HamlStatic::generator.new(
     #     source: options[:source],
     #     destination: options[:destination]
     #   )

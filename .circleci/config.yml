@@ -1,12 +1,15 @@
 version: 2.1
 commands:
   install_deps:
+    description: Install dependencies
     steps:
       - run: bundle install
   rubocop:
+    description: Run linter
     steps:
       - run: bundle exec rubocop --fail-level A
   tests:
+    description: Run tests
     steps:
       - run: bundle exec rake test
 

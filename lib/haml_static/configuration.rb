@@ -3,7 +3,7 @@
 require 'yaml'
 
 module HamlStatic
-  # Manages configuration as needed for the HamlStatic engine
+  # Manages configuration as needed for the HamlStatic gem
   class Configuration
     # Store the Default Config as a Hash constant so we can differentiate
     # between passed in default config and no provided config.
