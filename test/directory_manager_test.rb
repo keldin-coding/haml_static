@@ -47,7 +47,7 @@ class DirectoryManagerTest < Minitest::Test
       dir_manager.create_destination
     end
 
-    assert_match /Directory of '#{config.destination}' already exists/, error.message
+    assert_match(/Directory of '#{config.destination}' already exists/, error.message)
   end
 
   # rubocop:disable Lint/SuppressedException
