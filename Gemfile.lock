@@ -3,6 +3,7 @@ PATH
   specs:
     haml_static (0.1.0)
       haml (~> 5.1)
+      thor (~> 1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -32,8 +33,10 @@ GEM
       parser (>= 2.7.0.1)
     ruby-progressbar (1.10.1)
     temple (0.8.2)
+    thor (1.0.1)
     tilt (2.0.10)
     unicode-display_width (1.7.0)
+    yard (0.9.25)
 
 PLATFORMS
   ruby
@@ -43,6 +46,7 @@ DEPENDENCIES
   minitest (~> 5.0)
   rake (~> 12.0)
   rubocop (~> 0.87.0)
+  yard
 
 BUNDLED WITH
-   2.1.2
+   2.1.4
