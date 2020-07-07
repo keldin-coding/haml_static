@@ -9,6 +9,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.1)
+    docile (1.3.2)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -32,6 +33,10 @@ GEM
     rubocop-ast (0.1.0)
       parser (>= 2.7.0.1)
     ruby-progressbar (1.10.1)
+    simplecov (0.18.5)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+    simplecov-html (0.12.2)
     temple (0.8.2)
     thor (1.0.1)
     tilt (2.0.10)
@@ -46,6 +51,7 @@ DEPENDENCIES
   minitest (~> 5.0)
   rake (~> 12.0)
   rubocop (~> 0.87.0)
+  simplecov (~> 0.18)
   yard
 
 BUNDLED WITH

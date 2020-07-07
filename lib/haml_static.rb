@@ -11,12 +11,27 @@ module HamlStatic
 
   # Error for managing a missing configuration value
   class MissingConfigError < Error
+    # :nodoc:
     def initialize(name)
       @name = name
     end
 
+    # :nodoc:
     def message
       "Expect config of '#{@name}' was unset"
+    end
+  end
+
+  # Error for when a directory unexpectedly exists
+  class DirectoryExists < Error
+    # :nodoc:
+    def initialize(name)
+      @name = name
+    end
+
+    # :nodoc:
+    def message
+      "Directory of '#{@name}' already exists"
     end
   end
 end
