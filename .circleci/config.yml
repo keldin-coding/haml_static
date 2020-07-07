@@ -3,15 +3,15 @@ commands:
   install_deps:
     steps:
       - run: bundle install
-        name: Install Dependencies
+        description: Install Dependencies
   rubocop:
     steps:
       - run: bundle exec rubocop --fail-level A
-      - name: Linter
+      - description: Linter
   tests:
     steps:
       - run: bundle exec rake test
-      - name: Run tests
+      - description: Run tests
 
 jobs:
   build_2-6:
